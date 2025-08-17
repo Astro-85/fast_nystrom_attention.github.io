@@ -1,8 +1,8 @@
-# Nerfies
+# Fast Nystrom Attention
 
 This is the repository that contains source code for the [Fast Nystrom Attention website](https://fast_nystrom_attention.github.io).
 
-If you find Nerfies useful for your work please cite:
+If you find Fast Nystrom Attention useful for your work please cite:
 ```
 @article{lu2025artifacts,
   title={Artifacts and Attention Sinks: Structured Approximations for Efficient Vision Transformers},
