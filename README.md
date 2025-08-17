@@ -9,7 +9,6 @@ If you find Fast Nystrom Attention useful for your work please cite:
   author={Lu, Andrew and Liao, Wentinn and Wang, Liuhui and Yang, Huzheng and Shi, Jianbo},
   journal={arXiv preprint arXiv:2507.16018},
   year={2025},
-  month={July},
   url={https://arxiv.org/abs/2507.16018}
 }
 ```
