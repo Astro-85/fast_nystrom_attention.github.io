@@ -117,8 +117,7 @@
 
         <main>
             <figure>
-                <!-- FIGURE PLACEHOLDER: Insert Figure 1 from your paper here -->
-                <img src="https://via.placeholder.com/800x250.png?text=Figure+1:+Visualizations+of+Sink+Token+Masking" alt="Visualization of sink token masking">
+                <img src="./static/images/dino_clip_artifact_masking.png" alt="Visualization of sink token masking">
                 <figcaption>
                     <b>Figure 1:</b> Visualizations of sink token masks applied to features in CLIP and DINOv2. Masking these tokens, which act as attention sinks, helps to denoise features and emphasize regions of interest without any additional training.
                 </figcaption>
@@ -140,8 +139,7 @@
                     Furthermore, we identify <strong>"artifact tokens,"</strong> a dormant set of tokens that can become massive if the original massive tokens are removed. This reveals a built-in redundancy mechanism where the model can dynamically assign the role of an attention sink. While critical for information flow, these sink tokens can also introduce noise and hinder the model's performance on downstream tasks.
                 </p>
                 <figure>
-                    <!-- FIGURE PLACEHOLDER: Insert Figure 2 or 3 from your paper here -->
-                    <img src="https://via.placeholder.com/800x300.png?text=Figure+2:+Attention+Matrices+Showing+Sink+Formation" alt="Attention matrix visualization">
+                    <img src="./static/images/attention_iterative_removal_padded.pdf" alt="Attention matrix visualization">
                     <figcaption>
                         <b>Figure 2:</b> Attention matrices from CLIP ViT L-14. In later layers (11-13), massive tokens (MA) emerge and become attention sinks, attracting a large proportion of attention from all other tokens (CLS, Artifact, and Normal).
                     </figcaption>
@@ -167,10 +165,15 @@
                     This approach allows FNA to significantly reduce computational and memory overhead, making vision transformers more efficient for long sequences, without requiring any model retraining.
                 </p>
                 <figure>
-                    <!-- FIGURE PLACEHOLDER: Insert Figure 4 from your paper here -->
-                    <img src="https://via.placeholder.com/700x400.png?text=Figure+4:+FNA+Performance+vs.+Other+Methods" alt="FNA performance comparison">
+                    <img src="./static/images/fp16_attention_timing_plot.pdf" alt="FNA performance comparison">
                     <figcaption>
-                        <b>Figure 4:</b> FNA outperforms other linear attention methods in inference speed and scales much more favorably than standard quadratic attention (e.g., FlashAttention) for long sequences.
+                        <b>Figure 3:</b> FNA outperforms other linear attention methods in inference speed and scales much more favorably than standard quadratic attention (e.g., FlashAttention) for long sequences.
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="./static/images/llava_vqa_bert_f1.pdf" alt="FNA performance comparison">
+                    <figcaption>
+                        <b>Figure 4:</b> BERTScore and generation speed on COCO VQA for different configurations of FNA applied to LLaVA-NeXT-7B. Each color represents a LLaVA model with FNA applied on the causal attention to image tokens at the specified span of layers. Spot size represent FNA sample sizes ranging from 16 to 512 tokens out of ~2500 image tokens. .
                     </figcaption>
                 </figure>
             </section>
@@ -187,7 +190,7 @@
                     <!-- FIGURE PLACEHOLDER: Insert Table 5 results from your paper here -->
                     <img src="https://via.placeholder.com/800x200.png?text=Table+5:+Performance+Gains+from+Masking" alt="Table of results from masking">
                     <figcaption>
-                        <b>Table 5 Results:</b> Masking sink tokens in the final layers of CLIP ViT L-14 consistently improves zero-shot retrieval performance on COCO and Flickr30k.
+                        <b>Table 1 Results:</b> Masking sink tokens in the final layers of CLIP ViT L-14 consistently improves zero-shot retrieval performance on COCO and Flickr30k.
                     </figcaption>
                 </figure>
             </section>
@@ -201,7 +204,6 @@
       author={Lu, Andrew and Liao, Wentinn and Wang, Liuhui and Yang, Huzheng and Shi, Jianbo},
       journal={arXiv preprint arXiv:2507.16018},
       year={2025},
-      month={July},
       url={https://arxiv.org/abs/2507.16018}
 }</code></pre>
             </section>
